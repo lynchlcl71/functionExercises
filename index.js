@@ -150,37 +150,14 @@ var sum = [1, 2, 3].reduce(function (a, b) {
 
 console.log(sum);
 
+// Acronym Generator
 
+function acronym(text) {
+  return text
+    .split(/\s/)
+    .reduce(function(accumulator, word) {
+      return accumulator + word.charAt(0);
+    }, '');
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(acronym('Very Important Person'));
