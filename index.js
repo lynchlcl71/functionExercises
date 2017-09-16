@@ -104,18 +104,51 @@ var people = [
   'Ben'
 ];
 
- people.sort()
+var newArray = people.sort(function(firstPerson, secondPerson) {
+  if (firstPerson < secondPerson) {
+    return -1;
+  } else if (firstPerson > secondPerson) {
+    return 1;
+  } else {
+    return 0;
+  }
+});
+ console.log(newArray);
 
- console.log(people);
+//Sort an array of people by name length
+
+ var people = [
+  'Dom',
+  'Lyn',
+  'Kirk',
+  'Autumn',
+  'Trista',
+  'Jesslyn',
+  'Kevin',
+  'John',
+  'Eli',
+  'Juan',
+  'Robert',
+  'Keyur',
+  'Jason',
+  'Che',
+  'Ben'
+];
+
+ var newArray = people.sort(function(firstPerson, secondPerson) {
+  return firstPerson.length - secondPerson.length;
+ });
+
+ console.log(newArray);
 
 
+// Sum of an array
 
+var sum = [1, 2, 3].reduce(function (a, b) {
+  return a + b;
+});
 
-
-
-
-
-
+console.log(sum);
 
 
 
